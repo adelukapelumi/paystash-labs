@@ -1,0 +1,31 @@
+.splash-container {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-dots-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #4CAF50; /* Requested fintech green */
+  position: absolute;
+}
+
+.splash-brand-wrapper {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-brand-text {
+  font-size: 38px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+}

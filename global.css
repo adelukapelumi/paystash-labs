@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Global styles can still go here.
+  Component specific styles will go in their own .css files.
+*/
