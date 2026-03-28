@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Code
@@ -40,3 +42,11 @@ jobs:
         with:
           name: PayStash-Android-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Create Public GitHub Release with APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: "PayStash APK v1.0.${{ github.run_number }}"
+          body: "Standalone Android APK for PayStash - built automatically from the latest commit."
+          files: android/app/build/outputs/apk/debug/app-debug.apk
